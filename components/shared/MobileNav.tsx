@@ -56,7 +56,7 @@ const MobileNav = () => {
 
                                 <ul className="header-nav_elements">
                                 {navLinks.map((link) => {
-                                    const isActive = link.route === pathname
+                                    const isActive = link.route === (typeof pathname === 'function' ? pathname() : pathname);
 
                                     return (
                                         <li 
